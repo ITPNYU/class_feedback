@@ -169,4 +169,4 @@ app.get('/students/:student_netid/sections/:section_id/scores', function (req, r
 
 app.listen(8080);
 
-console.log("Server at http://localhost:3000/");
+console.log("Server at http://localhost:8080/");
