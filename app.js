@@ -740,6 +740,8 @@ function createStudentStuff() {
 								+ "<br><br>Best,<br>"
 								+ teacherStuff[from_netid].firstname + " " + teacherStuff[from_netid].lastname;
 
+					emailBody = emailBody.replace(/(?:\r\n|\r|\n)/g, '<br />');	
+							
 			   		vex.dialog.alert(
 			   			emailBody
 			   		);
@@ -916,6 +918,8 @@ function addField(fieldName, formElement, encode) {
 		else
 			strMailto += formElement;
 	}
+
+	//strMailto = strMailto.replace(/(?:\r\n|\r|\n)/g, '<br />');
 }
 
 function makeMailto( _infoObj ) {
@@ -991,6 +995,8 @@ function makeMailto( _infoObj ) {
 					+ $("#all_textEnd").val()
 					+ "\n\nWarmest,\n"
 					+ teacherStuff[from_netid].firstname + " " + teacherStuff[from_netid].lastname;
+
+					//console.log();
 
 		addField("body", emailBody, true);
 
